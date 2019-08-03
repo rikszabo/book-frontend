@@ -20,13 +20,13 @@ Elsőként a /book-app és a /book-backend mappában is ki kell adnunk az npm in
 Az alkalmazás a Dockerben történő indításra van írva, komponensenként történő indításhoz változtatni kell pár dolgon(lent leírva).
 Dockerben történő futtatás elött szükséges, hogy a Docker asztali verzója telepítve legyen, el legyen indítva, be legyünk jelentkezve.
 A /book-frontend mappában adjuk ki a docker-compose up parancsot. Kis időt vehet igénybe mire mindent elindít.
-
+A frontendet a böngészőben localhost:4200 cím alatt érjük el.
 
 -Komponensenként (docker mentes, alternatív futtatási verzió)
 
 Komponensenként történő futtatáshoz lokálisan kell letölteni egy MongoDB Server-t,
 amihez ezután meg kell adni egy tetszőleges mappa elérési útvonalát, amely tárolja az adatbázis adatait. Ezt terminálban adjuk meg, nyomjunk entert.
-Példa: /Users/Rik/Desktop/tesztApp/database/mongodb/bin/mongod --dbpath=/Users/Rik/Desktop/tesztApp/database/mongodb-data
+Példa: /Users/felhasznalo/Desktop/tesztApp/database/mongodb/bin/mongod --dbpath=/Users/felhasznalo/Desktop/tesztApp/database/mongodb-data
 
 Ezután a backend mappában található app.js fáljban le kell cserélni az adott sorokat: 
 mongoose.connect('mongodb://mongo:27017/myData',  {
