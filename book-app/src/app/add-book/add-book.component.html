@@ -5,19 +5,19 @@
             src="http://sallai-kszallas.sulinet.hu/wp-content/uploads/2018/08/Free-Images-Book-Wallpapers-HD.jpg"
             alt="Card image cap">
         <h3>Új könv hozzáadása</h3>
-        <div class="input-group mb-3">
+        <div class="input-group mb-2">
             <input type="text" class="form-control"  placeholder="Név" maxlength="35" 
                  [(ngModel)]="name" [ngModelOptions]="{standalone: true}">
         </div>
-        <div class="input-group mb-3">
+        <div class="input-group mb-2">
             <input type="text" class="form-control" placeholder="Író" maxlength="30" 
                  [(ngModel)]="writer" [ngModelOptions]="{standalone: true}">
         </div>
-        <div class="input-group mb-3">
+        <div class="input-group mb-2">
             <input type="text" class="form-control" placeholder="Nyelv" maxlength="30"
                  [(ngModel)]="language" [ngModelOptions]="{standalone: true}">
         </div>
-        <div class="input-group mb-3">
+        <div class="input-group mb-2">
             <select class="custom-select" id="inputGroupSelect02" [(ngModel)]="genre" [ngModelOptions]="{standalone: true}">
                 <option selected>Válassz...</option>
                 <option value="Blog">Blog</option>
@@ -39,7 +39,7 @@
             </select>
         </div>
         <div class="input-group">
-            <textarea class="form-control" aria-label="With textarea" placeholder="Leírás" [(ngModel)]="description" [ngModelOptions]="{standalone: true}"></textarea>
+            <textarea class="form-control" aria-label="With textarea" placeholder="Leírás" [(ngModel)]="description" [ngModelOptions]="{standalone: true}" maxlength="1000"></textarea>
         </div>
         <p class="empty" *ngIf="alert">Tölts ki minden mezőt</p>
         <div class="alert-box-actions">

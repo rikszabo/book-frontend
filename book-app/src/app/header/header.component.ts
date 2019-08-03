@@ -20,6 +20,8 @@ export class HeaderComponent implements OnInit {
   logoutButton: boolean;
 
   public userName: string;
+  
+  navbarOpen = false; 
 
   constructor(private router: Router, private listBook: ListBookComponent, private bookData: BookDataComponent) {
     this.registration = false;
@@ -36,6 +38,10 @@ export class HeaderComponent implements OnInit {
   openRegistration() {
     this.registration = true;
   }
+
+  toggleNavbar () { 
+    this.navbarOpen =! this.navbarOpen; 
+  } 
 
   openLogin() {
     this.login = true;

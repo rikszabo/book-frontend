@@ -27,13 +27,16 @@ $red: #e00000;
 }
 
 .dataWallpaper{
-    background: url(../resources/paper.jpg) no-repeat center center fixed; 
+    background: url(../resources/paper.jpg) center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    display: block;
     min-height: 100vh;
+    width: 100%;
+    resize: both;
+    overflow: auto;
+    position: absolute;
 }
 
 .empty {
