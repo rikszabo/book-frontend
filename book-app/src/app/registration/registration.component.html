@@ -1,0 +1,23 @@
+<div class="backdrop"></div>
+<div class="alert-box">
+    <form [formGroup]="myForm">
+    <h3>Regisztráció</h3>
+    <input type="text" class="form-control" placeholder="Felhasználónév" aria-label="Username" aria-describedby="basic-addon1" formControlName="username" >
+    <span *ngIf="isValid('username')">Felhasználónév kötelező</span>
+    <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" formControlName="email" >
+    <span *ngIf="isValid('email')">Email nem valid</span>
+    <input type="password" class="form-control" placeholder="Jelszó" aria-label="Password" aria-describedby="basic-addon1" formControlName="password" >
+    <span *ngIf="isValid('password')">Üres jelszó mező</span>
+    <input type="password" class="form-control" placeholder="Jelszó megerősítés" aria-label="Password" aria-describedby="basic-addon1" formControlName="cnfpassword" >
+    <span *ngIf="isValid('cnfpassword')">Jelszó nem egyezik</span>
+
+    <div center>
+        {{successMessage}}
+    </div>
+
+    <div class="alert-box-actions">
+        <button class="btn btn-warning" (click)="goRegistration()">Regisztráció</button>
+        <button class="btn btn-warning" (click)="close()">Kilépés</button>
+    </div>
+    </form>
+</div>

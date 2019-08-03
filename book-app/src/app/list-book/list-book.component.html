@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div class="listWallpaper">
+    <h1> Könyvek </h1>
+    <div class="container">
+        <div class="row">
+            <div class="col col-md-3" *ngFor="let item of items; let i = index">
+                <div class="card">
+                    <img class="card-img-top"
+                        src="http://sallai-kszallas.sulinet.hu/wp-content/uploads/2018/08/Free-Images-Book-Wallpapers-HD.jpg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title"><a>{{item.name}}</a></h4>
+                        <p class="card-text">{{item.writer}}</p>
+                        <a class="btn btn-warning" style="cursor: pointer;" (click)="openDataPage(i)">Adatlap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="empty">
+            <h1 class="empty"> Adatbázis kapcsolódási hiba / üres adatbázis </h1>
+        </div>
+    </div>
+</div>
+
+<app-book-data *ngIf="bookData"></app-book-data>
+<app-add-book *ngIf="addBook"></app-add-book>

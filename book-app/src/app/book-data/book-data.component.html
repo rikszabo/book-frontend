@@ -1,0 +1,25 @@
+<app-header></app-header>
+<div class="dataWallpaper">
+    <div class="container">
+        <h1 class="title">{{book.name}}</h1>
+        <div class="line">
+            <h2>{{book.writer}}</h2>
+        </div>
+        <div class="line">
+            <h3>Műfaj: {{book.genre}}</h3>
+        </div>
+        <div class="line">
+            <h3>Nyelv: {{book.language}}</h3>
+        </div>
+        <div class="rate">
+            <ngb-rating [(rate)]="currentRate"></ngb-rating>
+            <pre>Értékelés: <b>{{fullRate}}</b></pre>
+            <a *ngIf="ratePermission" class="btn btn-warning" style="cursor: pointer;" (click)="addRate()">Értékelem</a>
+        </div>
+        <div class="description">
+            <h2>{{book.description}}</h2>
+        </div>
+    </div>
+</div>
+
+<app-add-book *ngIf="addBook"></app-add-book>

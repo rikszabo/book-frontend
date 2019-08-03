@@ -1,0 +1,72 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+$body-bg: transparent;
+$white: #ffffff; 
+$warning: #ffbb33;
+$red: #e00000;
+
+.begin { 
+    background: url(../resources/book.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.listWallpaper{ 
+    background: url(../resources/library.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 50px;
+    display: block;
+    min-height: 100vh;
+}
+
+.dataWallpaper{
+    background: url(../resources/paper.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: block;
+    min-height: 100vh;
+}
+
+.empty {
+    text-align: center;
+    color: $red;
+}
+
+#username {
+    color: $warning;
+    font-size: 25px;
+    margin: 0px;
+}
+
+h1 {
+    color: $white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    color: $white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+h3 {
+    color: $white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

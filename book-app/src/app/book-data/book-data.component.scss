@@ -1,0 +1,49 @@
+$paper-color: #efe5d5;
+$white: #ffffff;
+$warning: #ffbb33;
+
+.container {
+    margin-top: 50px;
+}
+
+.my-container {
+    margin: 0px;
+}
+
+.title {
+    padding-top: 50px;
+    font-size: 50px;
+}
+
+.my-col {
+    margin: 0px;
+    padding: 0px;
+}
+
+.line{
+    text-align: center;
+    padding-top: 20px;
+}
+
+h1{
+    text-align: center;
+    margin: 0.5rem;
+    color: $white;
+}
+
+h3 {
+    color: black;
+}
+
+.description {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+}
+
+.rate {
+    text-align: center;
+    margin: 20px;
+}

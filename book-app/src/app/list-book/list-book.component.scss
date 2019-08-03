@@ -1,0 +1,39 @@
+$paper-color: #efe5d5;
+
+.col {
+    min-width: 17rem;
+    max-width: 17rem;
+    padding: 20px;
+}
+
+h1 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.card-body {
+    background: url(../../../resources/paper.jpg) no-repeat center center fixed; 
+    min-height: 12rem;
+    max-height: 12rem;
+}
+
+.btn-warning {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, 50%);
+}
+
+.card-title {
+    text-align: center;
+    color: black;
+}
+
+.card-text {
+    text-align: center;
+    color: black;
+}
+
+.btn-warning{
+    border-radius: 10px;
+}

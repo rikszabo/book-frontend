@@ -1,0 +1,51 @@
+<div class="backdrop"></div>
+<div class="alert-box">
+    <form style="width:100%;" >
+        <img class="card-img-top"
+            src="http://sallai-kszallas.sulinet.hu/wp-content/uploads/2018/08/Free-Images-Book-Wallpapers-HD.jpg"
+            alt="Card image cap">
+        <h3>Új könv hozzáadása</h3>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control"  placeholder="Név" maxlength="35" 
+                 [(ngModel)]="name" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Író" maxlength="30" 
+                 [(ngModel)]="writer" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Nyelv" maxlength="30"
+                 [(ngModel)]="language" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="input-group mb-3">
+            <select class="custom-select" id="inputGroupSelect02" [(ngModel)]="genre" [ngModelOptions]="{standalone: true}">
+                <option selected>Válassz...</option>
+                <option value="Blog">Blog</option>
+                <option value="Családregény">Családregény</option>
+                <option value="Dráma">Dráma</option>
+                <option value="Fantázia">Fantázia</option>
+                <option value="Horror">Horror</option>
+                <option value="Kalandregény">Kalandregény</option>
+                <option value="Krimi">Krimi</option>
+                <option value="Lélektani">Lélektani</option>
+                <option value="Mese">Mese</option>
+                <option value="Napló">Napló</option>
+                <option value="Novella">Novella</option>
+                <option value="Pszichológia">Pszichológia</option>
+                <option value="Regény">Regény</option>
+                <option value="Sci-fi">Sci-fi</option>
+                <option value="Tragédia">Tragédia</option>
+                <option value="Történelmi">Történelmi</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <textarea class="form-control" aria-label="With textarea" placeholder="Leírás" [(ngModel)]="description" [ngModelOptions]="{standalone: true}"></textarea>
+        </div>
+        <p class="empty" *ngIf="alert">Tölts ki minden mezőt</p>
+        <div class="alert-box-actions">
+            <button class="btn btn-warning" (click)="addNewBook()">Hozzáadás</button>
+            <button class="btn btn-warning" (click)="close()">Kilépés</button>
+        </div>
+
+    </form>
+</div>

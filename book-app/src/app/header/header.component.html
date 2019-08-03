@@ -1,0 +1,38 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+  <p *ngIf="logButton" class="navbar-brand" id="username">Book app</p>
+  <p *ngIf="!logButton" class="navbar-brand" id="username">Üdv {{userName}}!</p>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a *ngIf="!logButton" class="nav-link" style="cursor: pointer;"  (click)="openListBook()"> Kezdőlap</a>
+      </li>
+      <li class="nav-item">
+        <a *ngIf="!logButton" class="nav-link" style="cursor: pointer;" (click)="openAddBook()"> Könyv hozzáadása</a>
+      </li>
+      <li ngbDropdown class="nav-item dropdown">
+          <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0">
+      <button *ngIf="!logButton" type="button" class="btn btn-outline-warning" (click)="logOut()">Kijelentkezés</button>
+      <button *ngIf="logButton" type="button" class="btn btn-outline-warning"
+        (click)="openLogin()">Bejelentkezés</button>
+      <button *ngIf="regButton" type="button" class="btn btn-outline-warning"
+        (click)="openRegistration()">Regisztráció</button>
+    </form>
+  </div>
+</nav>
+
+<app-registration *ngIf="registration"></app-registration>
+<app-login *ngIf="login"></app-login>
