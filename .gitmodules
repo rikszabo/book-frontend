@@ -1,3 +1,6 @@
 [submodule "backend"]
 	path = backend
 	url = https://github.com/rikszabo/book-backend.git
+[submodule "book-backend"]
+	path = book-backend
+	url = https://github.com/rikszabo/book-backend
