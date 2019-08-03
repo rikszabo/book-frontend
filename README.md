@@ -8,22 +8,21 @@ Ez egy könyv nyilvántartó teszt alkalmazás
 
 Az alkalmazáshoz használt fontosabb technológiák: Angular 8, Node.JS, Firebase, Express.JS, MongoDB, JWT, Bootstrap, Sass, Docker.
 A feladatban a Firebase és MongoDB is szerepel, így a könyvek tárolása Firebase Realtime Database segítségével történik, 
-még a User authentikáció, regisztráció, illetve User adatainak tárolása MongoDB segítségével.
+még a User authentikáció, regisztráció, illetve User adatainak tárolása MongoDB segítségével. Ugyan azzal az e-mail címmel nem lehet többször regisztrálni. 
 
 
 Az alkalmazás indítása:
+
+Elsőként a /book-app és a /book-backend mappában is ki kell adnunk az npm install parancsot!
 
 -Docker
 
 Az alkalmazás a Dockerben történő indításra van írva, komponensenként történő indításhoz változtatni kell pár dolgon(lent leírva).
 Dockerben történő futtatás elött szükséges, hogy a Docker asztali verzója telepítve legyen, el legyen indítva, be legyünk jelentkezve.
+A /book-frontend mappában adjuk ki a docker-compose up parancsot. Kis időt vehet igénybe mire mindent elindít.
 
 
-
-
--Komponensenként
-
-Az npm install parancs kiadása a /backend és a /book-app mappákban is
+-Komponensenként (docker mentes, alternatív futtatási verzió)
 
 Komponensenként történő futtatáshoz lokálisan kell letölteni egy MongoDB Server-t,
 amihez ezután meg kell adni egy tetszőleges mappa elérési útvonalát, amely tárolja az adatbázis adatait. Ezt terminálban adjuk meg, nyomjunk entert.
