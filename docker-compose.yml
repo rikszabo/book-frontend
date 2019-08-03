@@ -8,12 +8,8 @@ services:
         build: book-app
         ports:
             - "4200:4200"
-        volumes:
-            - ./book-app:/app 
     backend:
-        build: backend
-        volumes:
-            - ./backend/backend:/
+        build: book-backend
         ports:
             - 3000:3000
         
