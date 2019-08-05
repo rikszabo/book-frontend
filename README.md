@@ -20,7 +20,7 @@ Elsőként a /book-app és a /book-backend mappában is ki kell adnunk az npm in
 Az alkalmazás a Dockerben történő indításra van írva, komponensenként történő indításhoz változtatni kell pár dolgon(lent leírva).
 Dockerben történő futtatás elött szükséges, hogy a Docker asztali verzója telepítve legyen, el legyen indítva, be legyünk jelentkezve.
 A /book-frontend mappában adjuk ki a docker-compose up parancsot. Kis időt vehet igénybe mire mindent elindít.
-A frontendet a böngészőben localhost:4200 cím alatt érjük el. Szükséges lehet a "docker pull mongo" parancs kiadása compose elött, ha nem tudunk kapcsolódni.
+A frontendet a böngészőben localhost:4200 cím alatt érjük el. Szükséges lehet a "docker pull mongo" parancs kiadása cli-ben compose elött, ha nem tudunk kapcsolódni.
 
 -Komponensenként (docker mentes, alternatív futtatási verzió)
 
